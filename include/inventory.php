@@ -45,9 +45,18 @@ echo '</tbody></table><hr>'
 ?>
 
 <form>
-    <h6>Accept Goods</h6>
+    <h5>Accept Goods</h5>
     <!--Optimize this part later-->
-    <select class="form-control" name = 'prod_id'>
+    <label>Select Brand</label>
+    <select class="form-control" style="width:50%;margin-bottom:10px;": name = 'prod_id'>
+        <?php  
+        foreach ($data as $prod){
+            echo '<option value='.$prod[0].'>'.$prod[2].'</option>';
+        }?>
+    </select>
+
+    <label>Select Product</label>
+    <select class="form-control" style="width:50%;margin-bottom:10px": name = 'prod_id'>
         <?php  
         foreach ($data as $prod){
             echo '<option value='.$prod[0].'>'.$prod[1].'</option>';

@@ -15,6 +15,7 @@ require('include/conn.php');?>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -25,7 +26,7 @@ require('include/conn.php');?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php">Choco Club</a>
+        <a  style="font-family:lobster"class="navbar-brand js-scroll-trigger" href="index.php">Choco Club</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,7 +44,9 @@ require('include/conn.php');?>
                 ';}?>
                 </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Checkout</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Checkout
+               <span style="font-size:10px"class="badge badge-secondary" id="cartlabel"></span>
+              </a>
             </li>
           </ul>
         </div>
@@ -78,11 +81,14 @@ require('include/conn.php');?>
                     <li class="breadcrumb-item active" aria-current="page">Showing: <?php if(isset($_GET['cat'])){echo($_GET['cat']);}else{echo' All';}?></li>
                     </ol>
                 </nav>
-                        <?php include('listitems.php')?> 
+              
+                        <?php include('include/listitems.php')?> 
                 </div>
 
                 <div class="col-lg-2">
-                    <div class="row ">
+                  
+                  
+                      <div class="row">
                         Social Media
                       </div>
                       <hr>

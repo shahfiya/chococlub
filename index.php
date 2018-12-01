@@ -16,6 +16,8 @@ require('include/conn.php')
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -27,7 +29,7 @@ require('include/conn.php')
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php">Choco Club</a>
+        <a style="font-family:lobster"class="navbar-brand js-scroll-trigger" href="index.php">Choco Club</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,11 +55,12 @@ require('include/conn.php')
       </div>
     </nav>
 
-    <header class="bg-primary text-white" style="background-color:none">
-      <div class="container text-center" style="background-color:none">
-      
-        <h1>Welcome to Choco Club</h1>
-        <p class="lead">The first rule of Choco Club: You go on and on about it!</p>
+    <header class="bg-primary text-white" style="background:url('img/banner.png')">
+    
+      <div class="container text-center" >
+        <img >                  
+        <h1 style="font-family:lobster">Welcome to Choco Club</h1>
+    
       </div>
     </header>
     <div class="container-fluid marquee">
@@ -76,14 +79,18 @@ require('include/conn.php')
             <h3>Top Products</h3>
             <hr>
             <div class="row">
-                <?php include('./include/homecards.php')?>
+                <?php 
+                // include('./include/homecards.php')
+                ?>
             </div>
+            <?php include('./include/listitems.php')?>
         
         </div>
       </div>
       <div class="row">
           <div class="col-lg-12 col-md-6 mb-4">
-              <?php include('./include/randomcards.php')?>
+              <?php
+              //  include('./include/randomcards.php')?>
           </div>
       </div>
       
